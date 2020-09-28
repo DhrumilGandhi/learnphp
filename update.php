@@ -1,3 +1,4 @@
+<!-- this page is use to show a existing data  -->
 <?php
 $conn = mysqli_connect('localhost', 'root', '', 'crud');
 $a = $_GET['id'];
@@ -6,6 +7,7 @@ $q = "SELECT * FROM crud_table where id = $a";
 $b = mysqli_query($conn, $q);
 
 while($c = mysqli_fetch_assoc($b)){    
+    // Fetch data 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +17,8 @@ while($c = mysqli_fetch_assoc($b)){
     <title>Update</title>
 </head>
 <body>
-    <form method="POST" action="update1.php">
+    <form method="POST" action="update1.php"> 
+        <!-- send to update1.php page  -->
         <input type="text" name = 'id' value = "<?php echo $c['id'] ?>" required/><br/>
         <input type="text" name = 'fname' value = "<?php echo $c['uname'] ?>" required/><br/>
         <input type="text" name = 'email' value = "<?php echo $c['email'] ?>" required/><br/>

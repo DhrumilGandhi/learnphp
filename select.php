@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>select</title>
     <style>
+        /* css for border  */
         table th{
             border: 1px solid black;
         }  
@@ -16,6 +17,7 @@
 </head>
 <body>
     <table>
+        <!-- table for show data  -->
         <tr>
             <th>ID</th>
             <th>Name</th>
@@ -31,7 +33,7 @@ $q = "SELECT * FROM crud_table";
 $a = mysqli_query($conn, $q);
 
 
-while($c = mysqli_fetch_assoc($a)){
+ while($c = mysqli_fetch_assoc($a)){ //using while loop for th data 
     ?>
 
         <tr>
